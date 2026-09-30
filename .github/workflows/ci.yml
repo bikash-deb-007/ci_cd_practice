@@ -1,0 +1,13 @@
+#trigger(on)
+name: addition of numbers
+on : push
+jobs:
+  Explore-addition-of-numbers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: install pytest
+        run:  pip install pytest
+      - name: run pytest
+        run: pytest
